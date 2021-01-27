@@ -1,0 +1,10 @@
+{
+   "appDescription": {
+      "description": "YoutubeLiveのテンプレートを保存・適用できる拡張です。",
+      "message": "YoutubeLiveのタイトルと概要欄をテンプレ化"
+   },
+   "appName": {
+      "description": "YoutubeLiveのテンプレートを保存・適用できる拡張です。",
+      "message": "YoutubeLive Template"
+   }
+}

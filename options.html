@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="scripts/analytics.js"></script>
+    <title>YoutubeLive Template</title>
+    <link rel="stylesheet" href="styles/options.css">
+  </head>
+  <body>
+    <header>
+      <h1>YoutubeLive Template</h1>
+    </header>
+    <div class="container">
+      <div class="row">
+        <div id="list" class="col-md-3">
+          <h2>テンプレート</h2>
+          <p>クリックでプレビューを表示</p>
+          <div class="list-group">
+            <ul></ul>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <h2>プレビュー</h2>
+          <div id="preview" data-id="">
+            <div class="topic-header">
+              <input id="title" class="form-control input-contrast" type="text" placeholder="配信タイトル">
+            </div>
+            <div class="write-content">
+              <textarea id="body" class="form-control input-contrast" placeholder="配信概要欄"></textarea>
+            </div>
+            <div class="topic-header">
+              <input id="videotags" class="form-control input-contrast" type="text" placeholder="タグ(スペース区切り スペースを含むタグ設定時は&quot;で囲うこと)">
+            </div>
+           </div>
+          <div id="tool">
+            <button id="delete" type="button" class="btn btn-danger">
+              <i class="fa fa-trash-o fa-lg" aria-hidden="true"></i>削除
+            </button>
+            <button id="edit" type="button" class="btn btn-danger">
+              <i class="fa fa-trash-o fa-lg" aria-hidden="true"></i>編集
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+    <template id="template-list">
+      <li>
+        <a class="template-title list-group-item" href="#" data-id=""></a>
+      </li>
+    </template>
+    <script src="scripts/options.js"></script>
+  </body>
+</html>
