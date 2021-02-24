@@ -4,6 +4,12 @@
  * live_dashboardページにテンプレートを反映する
  */
 
+function triggerEvent(element, event) {
+ var evt = document.createEvent("HTMLEvents");
+ evt.initEvent(event, true, true ); // event type, bubbling, cancelable
+ return element.dispatchEvent(evt);
+}
+
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
   var args = message.args;
 
@@ -20,9 +26,9 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 
   if (elemTitle && elemBody) {
     elemTitle.innerHTML = args.title;
-    elemTitle.dispatchEvent(new Event("onpaste"));
+    triggerEvent(elemTitle,"input");
     elemBody.innerHTML = args.body;
-    elemBody.dispatchEvent(new Event("onpaste"));
+    triggerEvent(elemBody,"input");
   }
   if (document.querySelector('#save-button')[0] != null) {
    document.querySelector('#save-changes-button')[0].disabled = false
